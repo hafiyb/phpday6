@@ -39,6 +39,8 @@ function insert_user($target, $value){
 
     $sql = "INSERT INTO user($target) VALUES ('$value')";
 
+    echo $sql;
+
     // echo $sql;
 
     if ($conn->query($sql) === TRUE) {
