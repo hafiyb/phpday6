@@ -10,6 +10,12 @@ function select_user_name($count){
 
     echo $sql;
 
+    if ($conn->query($sql) === TRUE) {
+        echo "data retrieved successfully";
+      } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+      }
+
     $result = $conn->query($sql);
 
     $row = $result->fetch_assoc();
