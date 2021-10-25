@@ -10,7 +10,7 @@ function select_user_name($count){
 
     echo $sql;
 
-    // $result = $conn->query($sql);
+    $result = $conn->query($sql);
 
     // $row = $result->fetch_assoc();
 
