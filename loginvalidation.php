@@ -44,7 +44,7 @@ if(password_verify($password,$actPassword)){
 
 } else {
     echo "Login failed";
-    echo "<br><br><a href='index.php'>Return</a>";
+    echo "<br><br><a href='login.php'>Return</a>";
 }
 
 ?>
