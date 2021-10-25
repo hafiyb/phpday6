@@ -1,12 +1,15 @@
 <?php
 function select_user_name($count){
-    $sql = "SELECT * FROM user WHERE user_id='$count'";
 
-    $result = $conn->query($sql);
+    echo "test";
 
-    $row = $result->fetch_assoc();
+    // $sql = "SELECT * FROM user WHERE user_id='$count'";
 
-    return $row['user_name'];
+    // $result = $conn->query($sql);
+
+    // $row = $result->fetch_assoc();
+
+    // echo $row['user_name'];
 }
 
 
