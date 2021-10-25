@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="dist/css/style.css?v=1.0.2" />
 <?php
 include 'header.php';
-include 'SQLuser.php'
+include 'model/SQLuser.php';
 ?>
 
 
