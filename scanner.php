@@ -355,13 +355,13 @@ if($status == 3){
 
 
                                     <?php
-                                            $sql = "SELECT * FROM user WHERE user_id='$count'";
+                                            // $sql = "SELECT * FROM user WHERE user_id='$count'";
 
-                                            $result = $conn->query($sql);
+                                            // $result = $conn->query($sql);
                                         
-                                            $row = $result->fetch_assoc();
+                                            // $row = $result->fetch_assoc();
                                         
-                                            echo "0".$row['user_phone'];
+                                            echo "0".select_user('user_id',$count)['user_phone'];
                                         ?>
 
 
@@ -383,7 +383,7 @@ if($status == 3){
                                         
                                             $row = $result->fetch_assoc();
                                         
-                                            echo $row['user_joined'];
+                                            echo select_user('user_id',$count)['user_joined'];
                                     ?>
 
 
