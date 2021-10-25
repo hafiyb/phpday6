@@ -1,6 +1,6 @@
 <?php
 include "header.php";
 
-header("Location: /login.php")
+header("Location: /phpday6/login.php")
 
 ?>
