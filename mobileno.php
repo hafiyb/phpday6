@@ -55,6 +55,8 @@ include 'header.php';
 
                 $count = $result->num_rows;
 
+                echo $count;
+
                 echo "<input type='hidden' name='count' value='$count'>";
                 echo "<input type='hidden' name='user_name' value='$name'>";
                 ?>
