@@ -33,9 +33,7 @@ include 'header.php';
     //     echo "Error: " . $sql . "<br>" . $conn->error;
     //   }
 
-    insert_user('user_name', $name)
-
-
+    insert_user('user_name', $name);
 
 ?>
     <div class="app__container">
