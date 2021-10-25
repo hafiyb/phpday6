@@ -57,13 +57,13 @@ if($status == 3){
 
 <?php
     
-    $sql = "SELECT * FROM user WHERE user_id='$count'";
+    // $sql = "SELECT * FROM user WHERE user_id='$count'";
 
-    $result = $conn->query($sql);
+    // $result = $conn->query($sql);
 
-    $row = $result->fetch_assoc();
+    // $row = $result->fetch_assoc();
 
-    echo $row['user_name'];
+    // echo $row['user_name'];
 
     select_user_name($count);
     
