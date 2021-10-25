@@ -8,6 +8,7 @@
 
 <?php
 include 'header.php';
+include 'SQLuser.php';
 ?>
 </head>
 <body>
@@ -15,14 +16,17 @@ include 'header.php';
 
 $phone = $_POST['phoneNum'];
 
-$sql = "SELECT * FROM user WHERE user_phone='$phone'";
+// $sql = "SELECT * FROM user WHERE user_phone='$phone'";
 
-$result = $conn->query($sql);
+// $result = $conn->query($sql);
 
-$row = $result->fetch_assoc();
+// $row = $result->fetch_assoc();
 
-$actPassword = $row['user_password'];
-echo $row['user_name'];
+
+
+// $actPassword = $row['user_password'];
+$actPassword = select_user('user_phone', $phone)['user_password'];
+echo select_user('user_phone', $phone)['user_name'];
 echo $phone;
 
 $password = $_POST['password'];
@@ -33,10 +37,11 @@ if(password_verify($password,$actPassword)){
 
     echo "Login succesful!";
     echo "<form method='post' action='scanner.php'>";
-    $sql = "SELECT user_id FROM user WHERE user_phone='$phone'";
-    $result = $conn->query($sql);
-    $row = $result->fetch_assoc();
-    $count = $row['user_id'];
+    // $sql = "SELECT user_id FROM user WHERE user_phone='$phone'";
+    // $result = $conn->query($sql);
+    // $row = $result->fetch_assoc();
+    // $count = $row['user_id'];
+    $count = select_user('user_phone', $phone)['user_id'];
     echo "<input type='hidden' name='count' value='$count'>";
     echo "<input type='hidden' name='status' value='1'>";
     echo "<input type='submit'> ";

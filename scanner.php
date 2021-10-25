@@ -377,11 +377,11 @@ if($status == 3){
 
 
                                     <?php
-                                            $sql = "SELECT * FROM user WHERE user_id='$count'";
+                                            // $sql = "SELECT * FROM user WHERE user_id='$count'";
 
-                                            $result = $conn->query($sql);
+                                            // $result = $conn->query($sql);
                                         
-                                            $row = $result->fetch_assoc();
+                                            // $row = $result->fetch_assoc();
                                         
                                             echo select_user('user_id',$count)['user_joined'];
                                     ?>

@@ -25,13 +25,15 @@ include 'header.php';
     $name = $_POST['user_name'];
     echo $name;
     
-    $sql = "INSERT INTO user(user_name) VALUES ('$name')";
+    // $sql = "INSERT INTO user(user_name) VALUES ('$name')";
 
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
-      } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-      }
+    // if ($conn->query($sql) === TRUE) {
+    //     echo "New record created successfully";
+    //   } else {
+    //     echo "Error: " . $sql . "<br>" . $conn->error;
+    //   }
+
+    insert_user('user_name', $name)
 
 
 
@@ -47,13 +49,13 @@ include 'header.php';
                 <input id="phone" name="phone" type="tel">
                 Password : <input id="phone" name="password" type="text" required>
                 <?php
-                $name = $_POST['user_name'];
+                // $name = $_POST['user_name'];
 
-                $sql = "SELECT user_id FROM user";
+                // $sql = "SELECT user_id FROM user";
 
-                $result = $conn->query($sql);
+                // $result = $conn->query($sql);
 
-                $count = $result->num_rows;
+                $count = select_all_user()->num_rows;
 
                 echo $count;
 
