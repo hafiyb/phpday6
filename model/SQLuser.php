@@ -1,18 +1,13 @@
 <?php
 
-// include 'header.php';
-
-
-
 function select_user_name($count){
+    include 'header.php';
 
-    $conn = mysqli_connect('localhost','debian-sys-maint','wAx970ocL4dxk5T4','mysj');
-
-    echo "this is a function test";
+    // echo "this is a function test";
 
     $sql = "SELECT * FROM user WHERE user_id='$count'";
 
-    echo $sql;
+    // echo $sql;
 
     $result = $conn->query($sql);
 
