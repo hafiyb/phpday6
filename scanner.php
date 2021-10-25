@@ -65,7 +65,7 @@ if($status == 3){
 
     // echo $row['user_name'];
 
-    select_user_name($count);
+    echo select_user_name($count);
     
     // echo 'test';
 ?>
