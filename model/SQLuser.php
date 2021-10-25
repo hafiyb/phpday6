@@ -33,7 +33,7 @@ function user_count(){
 
     echo $row->num-rows;
 
-    return $row->num_rows;
+    return $result->num_rows;
 }
 
 function insert_user($target, $value){
