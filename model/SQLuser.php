@@ -2,9 +2,11 @@
 
 // include 'header.php';
 
-$conn = mysqli_connect('localhost','debian-sys-maint','wAx970ocL4dxk5T4','mysj');
+
 
 function select_user_name($count){
+
+    $conn = mysqli_connect('localhost','debian-sys-maint','wAx970ocL4dxk5T4','mysj');
 
     echo "this is a function test";
 
