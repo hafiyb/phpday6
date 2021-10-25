@@ -13,7 +13,7 @@
 
     // echo $row['user_tac'];
 
-    $tac = select_user('user_id', $count)['user-tac'];
+    $tac = select_user('user_id', $count)['user_tac'];
 
     echo $tac;
     // if ($result->num_rows > 0) {
