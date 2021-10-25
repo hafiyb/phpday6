@@ -1,6 +1,6 @@
 <?php
 
-    include "header.php";
+    include "index.php";
     $count = $_POST['count'];
     $phone = $_POST['phone'];
 

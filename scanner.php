@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="dist/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" type="text/css" href="dist/css/style.css?v=1.0.5" />
     <?php
-include 'header.php';
+include 'index.php';
 ?>
 
 <?php
@@ -56,14 +56,16 @@ if($status == 3){
 
 <?php
     
-    $sql = "SELECT * FROM user WHERE user_id='$count'";
+    // $sql = "SELECT * FROM user WHERE user_id='$count'";
     
 
-    $result = $conn->query($sql);
+    // $result = $conn->query($sql);
 
-    $row = $result->fetch_assoc();
+    // $row = $result->fetch_assoc();
 
-    echo $row['user_name'];
+    // echo $row['user_name'];
+
+    echo select_user_name($count);
     
     // echo 'test';
 ?>

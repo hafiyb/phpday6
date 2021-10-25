@@ -16,7 +16,7 @@
 
 <?php
 
-include "header.php";
+include "index.php";
 echo 'test';
 ?>
 
