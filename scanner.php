@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="dist/css/style.css?v=1.0.5" />
     <?php
 include 'header.php';
-include "/model/SQLuser.php";
+// include "/model/SQLuser.php";
 ?>
 
 <?php
@@ -58,7 +58,6 @@ if($status == 3){
 <?php
     
     $sql = "SELECT * FROM user WHERE user_id='$count'";
-    
 
     $result = $conn->query($sql);
 
@@ -66,7 +65,7 @@ if($status == 3){
 
     echo $row['user_name'];
 
-    select_user_name($count);
+    // select_user_name($count);
     
     // echo 'test';
 ?>
