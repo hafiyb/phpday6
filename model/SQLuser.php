@@ -14,7 +14,6 @@ function select_user_name($count){
 
     $row = $result->fetch_assoc();
 
-    return 'test';
 
     // echo $row['user_name'];
 }
