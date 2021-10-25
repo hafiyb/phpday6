@@ -50,5 +50,28 @@ function insert_user($target, $value){
     }
 }
 
+function update_user_password($password, $phone, $count){
 
+    $hash = password_hash($password,PASSWORD_BCRYPT);   
+
+    $sql = "UPDATE user SET user_phone='$phone', user_password='$hash' WHERE user_id='$count'";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+      } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+      }
+    }
+
+    function update_user_tac($tac, $count){
+    
+        $sql = "UPDATE user SET user_tac='$tac' WHERE user_id='$count'";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+    }
+    
 ?>
