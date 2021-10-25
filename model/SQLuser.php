@@ -1,6 +1,6 @@
 <?php
 
-include '../header.php';
+include 'header.php';
 
 function select_user_name($count){
 
