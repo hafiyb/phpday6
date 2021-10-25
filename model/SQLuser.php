@@ -12,10 +12,9 @@ function select_user_name($count){
 
     $result = $conn->query($sql);
 
-    // $row = $result->fetch_assoc();
+    $row = $result->fetch_assoc();
 
-
-    // echo $row['user_name'];
+    echo $row['user_name'];
 }
 
 
