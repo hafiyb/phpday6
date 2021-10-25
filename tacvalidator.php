@@ -1,17 +1,21 @@
 <?php
 
     include "header.php";
+    include 'model/SQLuser.php';
     $count = $_POST['count'];
     $phone = $_POST['phone'];
 
-    $sql = "SELECT user_tac FROM user WHERE user_id='$count'";
+    // $sql = "SELECT user_tac FROM user WHERE user_id='$count'";
 
-    $result = $conn->query($sql);
+    // $result = $conn->query($sql);
 
-    $row = $result->fetch_assoc();
+    // $row = $result->fetch_assoc();
 
-    echo $row['user_tac'];
+    // echo $row['user_tac'];
 
+    $tac = select_user('user_id', $count)['user-tac'];
+
+    echo $tac;
     // if ($result->num_rows > 0) {
     //     while($row = $result->fetch_assoc()) {
     //         $actualtac = $result['user_tac'];        }
@@ -24,7 +28,7 @@
     $noArray = $_POST['no1'].$_POST['no2'].$_POST['no3'].$_POST['no4'].$_POST['no5'].$_POST['no6'];
     echo $noArray;
 
-    if($noArray == $row['user_tac']){
+    if($noArray == $tac){
         echo "Account validated!";
         echo "<form method='post' action='scanner.php'>";
         echo "<input type='hidden' name='count' value='".$count."'>";
