@@ -65,7 +65,7 @@ if($status == 3){
 
     // echo $row['user_name'];
 
-    echo select_user_name($count);
+    echo select_user('user_id',$count)['user_name'];
     
     // echo 'test';
 ?>
@@ -221,7 +221,7 @@ if($status == 3){
                                         
                                             // echo $row['user_name'];
 
-                                            echo select_user_name($count);
+                                            echo select_user('user_id',$count)['user_name'];
                                         ?>
 
 
@@ -341,7 +341,7 @@ if($status == 3){
                                         
                                             // echo $row['user_name'];
 
-                                            echo select_user_name($count);
+                                            echo select_user('user_id',$count)['user_name'];
                                         ?>
 
 

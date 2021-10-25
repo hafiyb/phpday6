@@ -1,11 +1,11 @@
 <?php
 
-function select_user_name($count){
+function select_user($id, $count){
     include 'header.php';
 
     // echo "this is a function test";
 
-    $sql = "SELECT * FROM user WHERE user_id='$count'";
+    $sql = "SELECT * FROM user WHERE $id='$count'";
 
     // echo $sql;
 
@@ -13,7 +13,7 @@ function select_user_name($count){
 
     $row = $result->fetch_assoc();
 
-    return $row['user_name'];
+    return $row;
 }
 
 
@@ -30,7 +30,7 @@ function select_user_phone($count){
 
     $row = $result->fetch_assoc();
 
-    echo $row['user_phone'];
+    return $row['user_phone'];
 }
 
 function select_user_password($count){
