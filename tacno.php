@@ -14,7 +14,7 @@
     <?php
 
     include 'header.php';
-    include 'SQLuser.php';
+    include 'model/SQLuser.php';
     ?>
 
 
