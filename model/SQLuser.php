@@ -57,6 +57,8 @@ function update_user_password($password, $phone, $count){
 
     $sql = "UPDATE user SET user_phone='$phone', user_password='$hash' WHERE user_id='$count'";
 
+    echo $sql;
+
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
       } else {
@@ -69,6 +71,9 @@ function update_user_tac($tac, $count){
     include 'header.php';
 
     $sql = "UPDATE user SET user_tac='$tac' WHERE user_id='$count'";
+
+    echo $sql;
+
 
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
