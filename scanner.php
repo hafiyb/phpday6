@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="dist/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" type="text/css" href="dist/css/style.css?v=1.0.5" />
     <?php
-include 'index.php';
+include 'header.php';
 ?>
 
 <?php

@@ -29,7 +29,7 @@ CREATE TABLE user(
     <link rel="stylesheet" type="text/css" href="dist/css/style.css?v=1.0.2" />
 
     <?php
-include 'index.php';
+include 'header.php';
 
 ?>
 

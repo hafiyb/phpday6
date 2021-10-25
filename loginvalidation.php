@@ -7,7 +7,7 @@
     <title>Document</title>
 
 <?php
-include 'index.php';
+include 'header.php';
 ?>
 </head>
 <body>
