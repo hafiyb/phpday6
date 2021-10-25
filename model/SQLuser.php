@@ -21,7 +21,7 @@ function select_all_user(){
 
     // echo "this is a function test";
 
-    $sql = "SELECT * FROM user WHERE $id='$count'";
+    $sql = "SELECT * FROM user";
 
     // echo $sql;
 
