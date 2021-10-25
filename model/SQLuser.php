@@ -16,7 +16,7 @@ function select_user($id, $count){
     return $row;
 }
 
-function select_all_user(){
+function user_count(){
     include 'header.php';
 
     // echo "this is a function test";
@@ -29,7 +29,7 @@ function select_all_user(){
 
     $row = $result->fetch_assoc();
 
-    return $row;
+    return $row->num_rows;
 }
 
 function insert_user($target, $value){

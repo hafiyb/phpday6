@@ -53,9 +53,7 @@ include 'model/SQLuser.php';
 
                 // $result = $conn->query($sql);
 
-                $row = select_all_user();
-
-                $count = $row->num_rows();
+                $count = user_count();
 
                 echo $count;
 
