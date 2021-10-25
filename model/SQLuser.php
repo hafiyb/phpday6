@@ -3,7 +3,7 @@
 
 function select_user_name($count){
 
-    // echo "this is a function test";
+    echo "this is a function test";
 
     $sql = "SELECT * FROM user WHERE user_id='$count'";
 
