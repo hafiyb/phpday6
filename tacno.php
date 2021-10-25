@@ -14,7 +14,7 @@
     <?php
 
     include 'header.php';
-
+    include 'SQLuser.php';
     ?>
 
 
@@ -27,28 +27,13 @@
     $phone = $_POST['phone'];
     $password = $_POST['password'];
 
-    $hash = password_hash($password,PASSWORD_BCRYPT);
-
-    $sql = "UPDATE user SET user_phone='$phone', user_password='$hash' WHERE user_id='$count'";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
-      } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-      }
+    update_user_password($password, $phone, $count);
 
     $randnum = rand(100000,999999);
 
     echo $randnum;
     
-    $sql = "UPDATE user SET user_tac='$randnum' WHERE user_id='$count'";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-
+    update_user_tac($randnum, $count);
     
 ?>
     <div class="app__container">
