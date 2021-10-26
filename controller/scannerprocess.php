@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+include '../model/SQLcheckin.php';
+
 $status = $_POST['status'];
 $count = $_SESSION['user_id'];
 
