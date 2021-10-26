@@ -1,6 +1,6 @@
 <?php
 
-    include "header.php";
+    include "../controller/header.php";
     include '../model/SQLuser.php';
     $count = $_POST['count'];
     $phone = $_POST['phone'];
