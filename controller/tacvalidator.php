@@ -15,7 +15,7 @@
 
     $tac = select_user('user_id', $count)['user_tac'];
 
-    echo $tac;
+    echo $tac." this is actual tac";
     // if ($result->num_rows > 0) {
     //     while($row = $result->fetch_assoc()) {
     //         $actualtac = $result['user_tac'];        }
@@ -26,7 +26,7 @@
     // echo $actualtac;
 
     $noArray = $_POST['no1'].$_POST['no2'].$_POST['no3'].$_POST['no4'].$_POST['no5'].$_POST['no6'];
-    echo $noArray;
+    echo $noArray." this is user input";
 
     if($noArray == $tac){
         echo "Account validated!";
