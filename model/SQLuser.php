@@ -81,5 +81,21 @@ function update_user_tac($tac, $count){
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
+
+function update_user_name($name, $count){
+
+    include '../controller/header.php';
+
+    $newName = $name;
+
+    $sql = "UPDATE user SET user_name='$newName' WHERE user_id='$count'";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "<script>alert('Successfully updated name!');</script>";
+        // echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
     
 ?>

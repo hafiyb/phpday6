@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
@@ -14,40 +18,46 @@
     <link rel="stylesheet" href="../dist/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" type="text/css" href="../dist/css/style.css?v=1.0.5" />
     <?php
-include 'header.php';
-require_once 'model/SQLuser.php';
+include '../controller/header.php';
+include '../model/SQLuser.php';
+include '../model/SQLcheckin.php';
 ?>
 
 <?php
 $status = $_POST['status'];
-$count = $_POST['count'];
+$count = $_SESSION['user_id'];
 
 echo $status;
 
 if($status == 2){
     $newName = $_POST['newName'];
 
-    $sql = "UPDATE user SET user_name='$newName' WHERE user_id='$count'";
+    // $sql = "UPDATE user SET user_name='$newName' WHERE user_id='$count'";
 
-    if ($conn->query($sql) === TRUE) {
-        echo "<script>alert('Successfully updated name!');</script>";
-        // echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+    // if ($conn->query($sql) === TRUE) {
+    //     echo "<script>alert('Successfully updated name!');</script>";
+    //     // echo "New record created successfully";
+    // } else {
+    //     echo "Error: " . $sql . "<br>" . $conn->error;
+    // }
+
+    update_user_name($newName, $count)
 }
 
 if($status == 3){
     $randomcompany = rand(1,3);
     echo $randomcompany;
-  $sql = "INSERT INTO check_in(company_id, user_id) VALUES ('$randomcompany','$count') ";
+//   $sql = "INSERT INTO check_in(company_id, user_id) VALUES ('$randomcompany','$count') ";
 
-    if ($conn->query($sql) === TRUE) {
-        echo "<script>alert('Successfully checked in!');</script>";
-        // echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+//     if ($conn->query($sql) === TRUE) {
+//         echo "<script>alert('Successfully checked in!');</script>";
+//         // echo "New record created successfully";
+//     } else {
+//         echo "Error: " . $sql . "<br>" . $conn->error;
+//     }
+
+    insert_checkin($randomcompany, $count);
+
 }
 ?>
 
