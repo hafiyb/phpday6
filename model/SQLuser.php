@@ -1,7 +1,7 @@
 <?php
 
 function select_user($id, $count){
-    include 'header.php';
+    include '../controller/header.php';
 
     // echo "this is a function test";
 
@@ -17,7 +17,7 @@ function select_user($id, $count){
 }
 
 function user_count(){
-    include 'header.php';
+    include '../controller/header.php';
 
     // echo "this is a function test";
 
@@ -37,7 +37,7 @@ function user_count(){
 }
 
 function insert_user($target, $value){
-    include 'header.php';
+    include '../controller/header.php';
 
     // echo "this is a function test";
 
@@ -55,7 +55,7 @@ function insert_user($target, $value){
 }
 
 function update_user_password($password, $phone, $count){
-    include 'header.php';
+    include '../controller/header.php';
 
     $hash = password_hash($password,PASSWORD_BCRYPT);   
 
@@ -72,7 +72,7 @@ function update_user_password($password, $phone, $count){
 
 function update_user_tac($tac, $count){
 
-    include 'header.php';
+    include '../controller/header.php';
 
     $sql = "UPDATE user SET user_tac='$tac' WHERE user_id='$count'";
 
