@@ -41,7 +41,7 @@ if($status == 2){
     //     echo "Error: " . $sql . "<br>" . $conn->error;
     // }
 
-    update_user_name($newName, $count)
+    update_user_name($newName, $count);
 }
 
 if($status == 3){
