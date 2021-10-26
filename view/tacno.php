@@ -13,8 +13,8 @@
     <link rel="stylesheet" type="text/css" href="dist/css/style.css?v=1.0.2" />
     <?php
 
-    include 'header.php';
-    include 'model/SQLuser.php';
+    include '../controller/header.php';
+    include '../model/SQLuser.php';
     ?>
 
 
@@ -22,19 +22,19 @@
 
 <body>
 <?php
-    echo $_POST['phone'];
-    $count = $_POST['count'];
-    echo $count;
-    $phone = $_POST['phone'];
-    $password = $_POST['password'];
+    // echo $_POST['phone'];
+    // $count = $_POST['count'];
+    // echo $count;
+    // $phone = $_POST['phone'];
+    // $password = $_POST['password'];
 
-    update_user_password($password, $phone, $count);
+    // update_user_password($password, $phone, $count);
 
-    $randnum = rand(100000,999999);
+    // $randnum = rand(100000,999999);
 
-    echo $randnum;
+    // echo $randnum;
     
-    update_user_tac($randnum, $count);
+    // update_user_tac($randnum, $count);
     
 ?>
     <div class="app__container">
@@ -44,7 +44,7 @@
             <div class="app__desc app__desc_tacno">
                 <p class="app__desc_1">Once your number is verified, it cannot be further amended.</p>
             </div>
-            <form action="tacvalidator.php" method="post">
+            <form action="../controller/tacvalidator.php" method="post">
                 <div class="pin-wrapper">
                     <input type="text" data-role="pin" maxlength="1" class="pin-input" name="no1">
                     <input type="text" data-role="pin" maxlength="1" class="pin-input" name="no2">

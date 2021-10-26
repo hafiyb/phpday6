@@ -1,7 +1,7 @@
 <?php
 
     include "header.php";
-    include 'model/SQLuser.php';
+    include '../model/SQLuser.php';
     $count = $_POST['count'];
     $phone = $_POST['phone'];
 
@@ -30,7 +30,7 @@
 
     if($noArray == $tac){
         echo "Account validated!";
-        echo "<form method='post' action='scanner.php'>";
+        echo "<form method='post' action='../view/scanner.php'>";
         echo "<input type='hidden' name='count' value='".$count."'>";
         echo "<input type='hidden' name='status' value='1'>";
         echo "<input type='submit' value='Okay'>";
@@ -38,7 +38,7 @@
         echo "</form>";
     } else {
         echo "Error!";
-        echo "<form method='post' action='tacno.php'>";
+        echo "<form method='post' action='../view/tacno.php'>";
         echo "<input type='hidden' name='count' value='".$count."'>";
         echo "<input type=hidden name='phone' value='".$phone."'>";
         echo "<input type='submit' value='Return'>";

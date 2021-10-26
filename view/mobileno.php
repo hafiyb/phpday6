@@ -13,8 +13,8 @@
   <link rel="stylesheet" href="dist/css/intlTelInput.css">
     <link rel="stylesheet" type="text/css" href="dist/css/style.css?v=1.0.2" />
 <?php
-include 'header.php';
-include 'model/SQLuser.php';
+include '../controller/header.php';
+include '../model/SQLuser.php';
 ?>
 
 
@@ -43,7 +43,7 @@ include 'model/SQLuser.php';
             <div class="app__desc app__desc_mobileno">
                 <p class="app__desc_1">Please enter your mobile number in full, <span class="app__name_newln">so that a verification code can be successfully sent.</span></p>
             </div>
-            <form action="tacno.php" method="post">
+            <form action="../controller/mobilevalidation.php" method="post">
                 <input id="phone" name="phone" type="tel">
                 Password : <input id="phone" name="password" type="text" required>
                 <?php

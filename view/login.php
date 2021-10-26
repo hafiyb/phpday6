@@ -7,13 +7,13 @@
     <title>Document</title>
 
     <?php
-    include "header.php";
+    include "../controller/header.php";
     ?>
     
 </head>
 <body>
 <h3>Login</h3>
-<form action="loginvalidation.php" method='post'>
+<form action="../controller/loginvalidation.php" method='post'>
 Phone Num : +60<input type="text" name="phoneNum">
 Password : <input type="text" name="password">
 <input type="submit">
