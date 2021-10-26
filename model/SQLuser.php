@@ -29,10 +29,6 @@ function user_count(){
 
     $row = $result->fetch_assoc();
 
-    print_r ($row);
-
-    echo $row->num_rows;
-
     return $result->num_rows;
 }
 
