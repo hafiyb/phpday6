@@ -6,6 +6,9 @@
     $count = $_SESSION['user_id'];
     $phone = $_SESSION['phone'];
 
+    echo $count;
+    echo $phone;
+
     // $sql = "SELECT user_tac FROM user WHERE user_id='$count'";
 
     // $result = $conn->query($sql);

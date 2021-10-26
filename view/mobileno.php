@@ -59,6 +59,7 @@ include '../model/SQLuser.php';
                 $_SESSION['user_id'] = $count;
 
                 echo $count;
+                echo $_SESSION['user_id'];
 
                 echo "<input type='hidden' name='count' value='$count'>";
                 echo "<input type='hidden' name='user_name' value='$name'>";
