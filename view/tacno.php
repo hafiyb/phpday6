@@ -22,10 +22,10 @@
 
 <body>
 <?php
-    // echo $_POST['phone'];
-    // $count = $_POST['count'];
-    // echo $count;
-    // $phone = $_POST['phone'];
+    echo $_POST['phone'];
+    $count = $_POST['count'];
+    echo $count;
+    $phone = $_POST['phone'];
     // $password = $_POST['password'];
 
     // update_user_password($password, $phone, $count);
