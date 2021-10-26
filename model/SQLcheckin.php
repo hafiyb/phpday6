@@ -16,6 +16,8 @@ function insert_checkin($company_id, $count){
 }
 
 function select_checkin($count){
+
+    include '../controller/header.php';
 $sql = "SELECT * FROM check_in INNER JOIN company ON check_in.company_id = company.company_id WHERE user_id = $count";
 
 $result = $conn->query($sql);
@@ -35,6 +37,8 @@ if ($result->num_rows > 0) {
 }
 
 function check_in_count($count){
+
+    include '../controller/header.php';
     $sql = "SELECT * FROM check_In WHERE user_id='$count'";
 
     $result = $conn->query($sql);
