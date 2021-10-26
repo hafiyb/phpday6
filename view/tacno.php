@@ -15,6 +15,7 @@
 
     include '../controller/header.php';
     include '../model/SQLuser.php';
+    include '../class.php';
     ?>
 
 
@@ -24,6 +25,8 @@
 <?php
     echo $_POST['phone'];
     $count = $_SESSION['user_id'];
+
+
     echo $count;
     $phone = $_POST['phone'];
     // $password = $_POST['password'];

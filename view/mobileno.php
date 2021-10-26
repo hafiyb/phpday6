@@ -15,6 +15,7 @@
 <?php
 include '../controller/header.php';
 include '../model/SQLuser.php';
+include '../class.php';
 ?>
 
 
@@ -35,6 +36,8 @@ include '../model/SQLuser.php';
     //   }
 
     insert_user('user_name', $name);
+
+
 
 ?>
     <div class="app__container">
@@ -57,6 +60,12 @@ include '../model/SQLuser.php';
                 $count = user_count();
 
                 $_SESSION['user_id'] = $count;
+
+                $name = new user();
+
+                $name->set_id($count);
+
+                echo "this is user id".$name->get_id();
 
                 echo $count;
                 echo $_SESSION['user_id'];

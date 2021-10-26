@@ -30,7 +30,7 @@ CREATE TABLE user(
 
     <?php
 include '../controller/header.php';
-
+include '../class.php';
 ?>
 
 </head>

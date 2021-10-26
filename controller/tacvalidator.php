@@ -6,8 +6,9 @@ session_start();
 
     include "header.php";
     include '../model/SQLuser.php';
-
-    $count = $_SESSION['user_id'];
+    
+    $count = user_count();
+    // $count = $_SESSION['user_id'];
     $phone = $_SESSION['phone'];
 
     echo $count;
