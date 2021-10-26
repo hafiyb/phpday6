@@ -61,11 +61,11 @@ include '../class.php';
 
                 $_SESSION['user_id'] = $count;
 
-                $name = new user();
+                // $name = new user();
 
-                $name->set_id($count);
+                // $name->set_id($count);
 
-                echo "this is user id".$name->get_id();
+                // echo "this is user id".$name->get_id();
 
                 echo $count;
                 echo $_SESSION['user_id'];
