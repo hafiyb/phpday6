@@ -26,39 +26,7 @@ include '../model/SQLcheckin.php';
 <?php
 $status = $_POST['status'];
 $count = $_SESSION['user_id'];
-
-echo $status;
-
-if($status == 2){
-    $newName = $_POST['newName'];
-
-    // $sql = "UPDATE user SET user_name='$newName' WHERE user_id='$count'";
-
-    // if ($conn->query($sql) === TRUE) {
-    //     echo "<script>alert('Successfully updated name!');</script>";
-    //     // echo "New record created successfully";
-    // } else {
-    //     echo "Error: " . $sql . "<br>" . $conn->error;
-    // }
-
-    update_user_name($newName, $count);
-}
-
-if($status == 3){
-    $randomcompany = rand(1,3);
-    echo $randomcompany;
-//   $sql = "INSERT INTO check_in(company_id, user_id) VALUES ('$randomcompany','$count') ";
-
-//     if ($conn->query($sql) === TRUE) {
-//         echo "<script>alert('Successfully checked in!');</script>";
-//         // echo "New record created successfully";
-//     } else {
-//         echo "Error: " . $sql . "<br>" . $conn->error;
-//     }
-
-    insert_checkin($randomcompany, $count);
-
-}
+$_POST['count'] = $_SESSION['user_id'];
 ?>
 
 </head>
@@ -106,7 +74,7 @@ if($status == 3){
 
                             <?php
                             $count = $_POST['count'];
-                            echo "<form action='scanner.php' method='post'>";
+                            echo "<form action='../scannerprocess.php' method='post'>";
                             echo "<input type=hidden name='count' value='".$count."'>";
                             echo "<input type=hidden name='status' value='3'";
                             echo "<a><img src='../dist/images/cvd_scanner_camera.png' alt=''/  onclick='this.parentNode.submit();'></a>";
@@ -276,7 +244,7 @@ if($status == 3){
                                 <a href="#" class="cancel_btn cancel_profile"><img src="../dist/images/svg/cancel_blue.svg" alt=""/></a>
                                 <div class="card_profile_content">
 
-                                    <form action="scanner.php" method="post">
+                                    <form action="../scannerprocess.php" method="post">
 
 
                                     <div class="form_group form_name">
@@ -409,12 +377,14 @@ if($status == 3){
                                     <label class="form_lbl">Total Check-Ins</label>
 
                                     <?php
-                                            $sql = "SELECT * FROM check_In WHERE user_id='$count'";
+                                            // $sql = "SELECT * FROM check_In WHERE user_id='$count'";
 
-                                            $result = $conn->query($sql);
+                                            // $result = $conn->query($sql);
                                         
-                                            $checkincount = $result->num_rows;
-                                            echo $checkincount;
+                                            // $checkincount = $result->num_rows;
+                                            // echo $checkincount;
+
+                                            echo check_in_count($count);
                                     ?>
 
 
@@ -630,22 +600,24 @@ if($status == 3){
 
 
 
-                                $sql = "SELECT * FROM check_in INNER JOIN company ON check_in.company_id = company.company_id WHERE user_id = $count";
+                                // $sql = "SELECT * FROM check_in INNER JOIN company ON check_in.company_id = company.company_id WHERE user_id = $count";
 
-                                $result = $conn->query($sql);
+                                // $result = $conn->query($sql);
 
-                                if ($result->num_rows > 0) {
-                                    // output data of each row
-                                    while($row = $result->fetch_assoc()) {
-                                        echo "<div class='calendar_row'>";
-                                            echo "<div class='calendar_company'>".$row['company_name']."</div>";
-                                            echo "<div class='calendar_branch'>".$row['location']."</div>";
-                                            echo "<div class='calendar_date'>".$row['check_in_time']."</div>";
-                                        echo "</div>";
-                                    }
-                                } else {
-                                    echo "0 results";
-                                }
+                                // if ($result->num_rows > 0) {
+                                //     // output data of each row
+                                //     while($row = $result->fetch_assoc()) {
+                                //         echo "<div class='calendar_row'>";
+                                //             echo "<div class='calendar_company'>".$row['company_name']."</div>";
+                                //             echo "<div class='calendar_branch'>".$row['location']."</div>";
+                                //             echo "<div class='calendar_date'>".$row['check_in_time']."</div>";
+                                //         echo "</div>";
+                                //     }
+                                // } else {
+                                //     echo "0 results";
+                                // }
+
+                                select_checkin($count);
 
 
 

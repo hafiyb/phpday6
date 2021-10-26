@@ -15,4 +15,32 @@ function insert_checkin($company_id, $count){
     }
 }
 
+function select_checkin($count){
+$sql = "SELECT * FROM check_in INNER JOIN company ON check_in.company_id = company.company_id WHERE user_id = $count";
+
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<div class='calendar_row'>";
+            echo "<div class='calendar_company'>".$row['company_name']."</div>";
+            echo "<div class='calendar_branch'>".$row['location']."</div>";
+            echo "<div class='calendar_date'>".$row['check_in_time']."</div>";
+        echo "</div>";
+    }
+} else {
+    echo "0 results";
+}
+}
+
+function check_in_count($count){
+    $sql = "SELECT * FROM check_In WHERE user_id='$count'";
+
+    $result = $conn->query($sql);
+
+    $checkincount = $result->num_rows;
+    return $checkincount;
+}
+
 ?>
