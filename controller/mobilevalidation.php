@@ -6,6 +6,7 @@
     $count = $_POST['count'];
     // echo $count;
     $phone = $_POST['phone'];
+    $_SESSION['phone'] = $phone;
     $password = $_POST['password'];
 
     update_user_password($password, $phone, $count);

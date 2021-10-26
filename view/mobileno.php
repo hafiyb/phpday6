@@ -22,6 +22,7 @@ include '../model/SQLuser.php';
 
 <body>
 <?php
+    session_start();
     $name = $_POST['user_name'];
     echo $name;
     
@@ -54,6 +55,8 @@ include '../model/SQLuser.php';
                 // $result = $conn->query($sql);
 
                 $count = user_count();
+
+                $_SESSION['user_id'] = $count;
 
                 echo $count;
 

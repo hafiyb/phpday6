@@ -1,9 +1,10 @@
 <?php
 
-    include "../controller/header.php";
+    include "header.php";
     include '../model/SQLuser.php';
-    $count = $_POST['count'];
-    $phone = $_POST['phone'];
+
+    $count = $_SESSION['user_id'];
+    $phone = $_SESSION['phone'];
 
     // $sql = "SELECT user_tac FROM user WHERE user_id='$count'";
 
