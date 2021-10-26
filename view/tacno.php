@@ -39,7 +39,7 @@
 ?>
     <div class="app__container">
         <div class="app__wrapper">
-            <div class="app__logo"><img src="dist/images/svg/cvd_logo.svg" alt="" /></div>
+            <div class="app__logo"><img src="../dist/images/svg/cvd_logo.svg" alt="" /></div>
             <div class="app__headline">Enter your <span class="app__name_newln">6-digit TAC</span></div>
             <div class="app__desc app__desc_tacno">
                 <p class="app__desc_1">Once your number is verified, it cannot be further amended.</p>
@@ -62,11 +62,11 @@
                 </div>
                 <div class="form_app_submit_container">
                 <input type="submit">    
-                <!-- <button type="button" class="form_app_submit btn_orange" onclick="location.href='scanner.html';">Complete <span class="next_arrow_icon"><img src="dist/images/svg/arrow_right_white.svg" alt=""></span></button> -->
+                <!-- <button type="button" class="form_app_submit btn_orange" onclick="location.href='scanner.html';">Complete <span class="next_arrow_icon"><img src="../dist/images/svg/arrow_right_white.svg" alt=""></span></button> -->
                 </div>
             </form>
         </div>
-        <div class="app__artwork_name"><img src="dist/images/svg/cvd_artwork_tac.svg" alt=""></div>
+        <div class="app__artwork_name"><img src="../dist/images/svg/cvd_artwork_tac.svg" alt=""></div>
     </div>
 
     <script src="dist/js/jquery-3.2.1.slim.min.js"></script>

@@ -38,7 +38,7 @@ include '../model/SQLuser.php';
 ?>
     <div class="app__container">
         <div class="app__wrapper">
-            <div class="app__logo"><img src="dist/images/svg/cvd_logo.svg" alt="" /></div>
+            <div class="app__logo"><img src="../dist/images/svg/cvd_logo.svg" alt="" /></div>
             <div class="app__headline">Verify Your Number</div>
             <div class="app__desc app__desc_mobileno">
                 <p class="app__desc_1">Please enter your mobile number in full, <span class="app__name_newln">so that a verification code can be successfully sent.</span></p>
@@ -67,14 +67,14 @@ include '../model/SQLuser.php';
                 </div>
             </form>
         </div>
-        <div class="app__artwork_name"><img src="dist/images/svg/cvd_artwork_mobileno.svg" alt=""></div>
+        <div class="app__artwork_name"><img src="../dist/images/svg/cvd_artwork_mobileno.svg" alt=""></div>
     </div>
 
-    <script src="dist/js/jquery-3.2.1.slim.min.js"></script>
-    <script src="dist/js/popper.min.js"></script>
-    <script src="dist/js/bootstrap.min.js"></script>
-    <script src="dist/js/intlTelInput.min.js"></script>
-    <script src="dist/js/app.js"></script>
+    <script src="../dist/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="../dist/js/popper.min.js"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
+    <script src="../dist/js/intlTelInput.min.js"></script>
+    <script src="../ist/js/app.js"></script>
 
     <script>
         var input = document.querySelector("#phone");
@@ -99,7 +99,7 @@ include '../model/SQLuser.php';
           // placeholderNumberType: "MOBILE",
            preferredCountries: ['my', 'sg'],
            separateDialCode: true,
-           utilsScript: "dist/js/utils.js",
+           utilsScript: "../dist/js/utils.js",
         });
     </script>
 </body>
