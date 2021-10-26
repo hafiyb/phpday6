@@ -31,7 +31,7 @@ function user_count(){
 
     print_r ($row);
 
-    echo $row->num-rows;
+    echo $row->num_rows;
 
     return $result->num_rows;
 }
