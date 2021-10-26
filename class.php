@@ -8,7 +8,7 @@ class user{
         $this->name = $name;
     }
 
-    function get_name($name){
+    function get_name(){
         return $this->name;
     }
 
@@ -16,7 +16,7 @@ class user{
         $this->id = $id;
     }
 
-    function get_id($id){
+    function get_id(){
         return $this->id;
     }
 }
