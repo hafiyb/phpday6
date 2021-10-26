@@ -23,7 +23,7 @@
 <body>
 <?php
     echo $_POST['phone'];
-    $count = $_POST['count'];
+    $count = $_SESSION['user_id'];
     echo $count;
     $phone = $_POST['phone'];
     // $password = $_POST['password'];
