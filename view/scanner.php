@@ -25,8 +25,8 @@ include '../model/SQLcheckin.php';
 
 <?php
 $status = $_POST['status'];
-$count = $_SESSION['user_id'];
-$_POST['count'] = $_SESSION['user_id'];
+$count = $_POST['count'];
+
 ?>
 
 </head>
