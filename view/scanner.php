@@ -325,6 +325,10 @@ $_POST['count'] = $_SESSION['user_id'];
                                             // echo $row['user_name'];
 
                                             echo select_user('user_id',$count)['user_name'];
+
+                                            if(check_in_count($count) >= 8){
+                                                echo "okay";
+                                            }
                                         ?>
 
 

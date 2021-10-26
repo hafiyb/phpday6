@@ -39,7 +39,7 @@ if ($result->num_rows > 0) {
 function check_in_count($count){
 
     include '../controller/header.php';
-    $sql = "SELECT * FROM check_In WHERE user_id='$count'";
+    $sql = "SELECT * FROM check_in WHERE user_id='$count'";
 
     $result = $conn->query($sql);
 
