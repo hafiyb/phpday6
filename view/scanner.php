@@ -74,7 +74,7 @@ $_POST['count'] = $_SESSION['user_id'];
 
                             <?php
                             $count = $_POST['count'];
-                            echo "<form action='../scannerprocess.php' method='post'>";
+                            echo "<form action='../controller/scannerprocess.php' method='post'>";
                             echo "<input type=hidden name='count' value='".$count."'>";
                             echo "<input type=hidden name='status' value='3'";
                             echo "<a><img src='../dist/images/cvd_scanner_camera.png' alt=''/  onclick='this.parentNode.submit();'></a>";
@@ -244,7 +244,7 @@ $_POST['count'] = $_SESSION['user_id'];
                                 <a href="#" class="cancel_btn cancel_profile"><img src="../dist/images/svg/cancel_blue.svg" alt=""/></a>
                                 <div class="card_profile_content">
 
-                                    <form action="../scannerprocess.php" method="post">
+                                    <form action="../controller/scannerprocess.php" method="post">
 
 
                                     <div class="form_group form_name">
