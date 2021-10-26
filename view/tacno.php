@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="format-detection" content="telephone=no" />
 
-    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="dist/css/style.css?v=1.0.2" />
+    <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../dist/css/style.css?v=1.0.2" />
     <?php
 
     include '../controller/header.php';

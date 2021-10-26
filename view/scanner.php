@@ -10,9 +10,9 @@
     <meta name="format-detection" content="telephone=no" />
 
 
-    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="dist/css/bootstrap-datepicker.min.css">
-    <link rel="stylesheet" type="text/css" href="dist/css/style.css?v=1.0.5" />
+    <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dist/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../dist/css/style.css?v=1.0.5" />
     <?php
 include 'header.php';
 require_once 'model/SQLuser.php';
