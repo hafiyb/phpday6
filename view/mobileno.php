@@ -22,7 +22,7 @@ include '../model/SQLuser.php';
 
 <body>
 <?php
-    session_start();
+    
     $name = $_POST['user_name'];
     echo $name;
     
