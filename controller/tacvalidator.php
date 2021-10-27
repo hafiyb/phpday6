@@ -39,7 +39,7 @@ session_start();
 
     if($noArray == $tac){
         echo "Account validated!";
-        echo "<form method='post' action='../view/scanner.php'>";
+        echo "<form method='get' action='../view/scanner.php'>";
         echo "<input type='hidden' name='count' value='".$count."'>";
         echo "<input type='hidden' name='status' value='1'>";
         echo "<input type='submit' value='Okay'>";
