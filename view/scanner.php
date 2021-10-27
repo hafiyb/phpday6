@@ -73,7 +73,7 @@ $count = $_GET['count'];
 
 
                             <?php
-                            $count = $_POST['count'];
+                            // $count = $_POST['count'];
                             echo "<form action='../controller/scannerprocess.php' method='post'>";
                             echo "<input type=hidden name='count' value='".$count."'>";
                             echo "<input type=hidden name='status' value='3'";
