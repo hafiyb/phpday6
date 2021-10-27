@@ -22,7 +22,7 @@ if($status == 3){
 
     insert_checkin($randomcompany, $count);
 
-    header("Location: ../view/scanner.php");
+    header("../view/scanner.php?id=".$count);
 }
 
 ?>
