@@ -24,8 +24,8 @@ include '../model/SQLcheckin.php';
 ?>
 
 <?php
-$status = $_POST['status'];
-$count = $_POST['count'];
+$status = $_GET['status'];
+$count = $_GET['count'];
 
 ?>
 

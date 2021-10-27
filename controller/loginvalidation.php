@@ -39,7 +39,7 @@ echo $actPassword;
 if(password_verify($password,$actPassword)){
 
     echo "Login succesful!";
-    echo "<form method='post' action='../view/scanner.php'>";
+    echo "<form method='get' action='../view/scanner.php'>";
     // $sql = "SELECT user_id FROM user WHERE user_phone='$phone'";
     // $result = $conn->query($sql);
     // $row = $result->fetch_assoc();
