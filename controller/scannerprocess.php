@@ -13,7 +13,7 @@ if($status == 2){
 
     update_user_name($newName, $count);
 
-    header("Location: ../view/scanner.php");
+    header("Location: ../view/scanner.php?count=".$count);
 }
 
 if($status == 3){
@@ -22,7 +22,7 @@ if($status == 3){
 
     insert_checkin($randomcompany, $count);
 
-    header("../view/scanner.php?id=".$count);
+    header("Location: ../view/scanner.php?count=".$count);
 }
 
 ?>
